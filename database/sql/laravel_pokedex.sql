@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-01-2022 a las 11:23:53
+-- Tiempo de generación: 23-01-2022 a las 11:45:48
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -125,7 +125,7 @@ CREATE TABLE `pokemon` (
   `peso` double NOT NULL,
   `altura` double NOT NULL,
   `favorito` tinyint(1) NOT NULL DEFAULT 0,
-  `imagen` longblob DEFAULT NULL
+  `imagen` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
