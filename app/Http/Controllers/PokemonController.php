@@ -42,7 +42,7 @@ class PokemonController extends Controller
     public function updateImage(Request $request){
         try {
             //bookcover: name del input, uploads: directorio storage/app/uploads
-            $path = $request->file('img')->store('uploads');
+            $path = $request->file('img')->store('uploads','public');
             DB::update('update pokemon set imagen = ? where numero_pokedex=?', [$path, $request->input('numero_pokedex')]);
         
             return response()->json(array('resultado'=> 'OK'));

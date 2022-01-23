@@ -15,7 +15,6 @@
 
 <body>
 
-    <img src="{{asset('storage/uploads/uQqk9O2Qh7qiovmpDFPfi1UHgdrkXKO0JSDNkTiO.png')}}" width="100">
     <div class="row">
         <div class="column-1">
             <h1>Pokédex de Kanto</h1>
@@ -27,7 +26,7 @@
         </div>
 
         <div class="column-2 padding-2" id="message">
-            <h4>Busca un Pokémon por su nombre. Sube una imagen del Pokémon para registrarlo.</h4>
+            <h4>Busca un Pokémon por su nombre o por favorito. Sube una imagen del Pokémon para registrarlo.</h4>
         </div>
     </div>
     <div class="row">

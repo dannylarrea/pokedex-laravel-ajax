@@ -39,7 +39,7 @@ function read() {
             for (var i = 0; i < respuesta.length; i++) {
                 tabla += '<div class="column-5">'
                 if (respuesta[i].imagen != null) {
-                    tabla += '<img src="' + respuesta[i].imagen + '" alt="error">'
+                    tabla += '<img src="storage/' + respuesta[i].imagen + '" alt="error">'
                     tabla += '<div>'
 
                     tabla += '<img src="images/catched.png" alt="error">'
