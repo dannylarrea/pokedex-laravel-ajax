@@ -22,14 +22,28 @@
 
 ### Agregar AJAX al desarrollo
 
-1. ```js
+1. **ajax.js**
+   ```js
    /* Actualiza el campo imagen de un pokemon en la base de datos */
    function addImage() {
       // code...
    }
    ```
 
-2. ```js
+   **Controller**
+
+   ```php
+      public function updateImage(Request $request){
+         try {
+               // code...
+         } catch (\Throwable $th) {
+               return response()->json(array('resultado'=> 'NOK: '.$th->getMessage().' | '));
+         }
+      }
+   ```
+
+2. **ajax.js**
+   ```js
    /* Actualiza el campo favorito de un pokemon en la base de datos */
    function updateFav(num, fav) {
       // code...
@@ -42,4 +56,17 @@
       formData.append('img', imagen);
       */
    }
+   ```
+   
+   **Controller**
+
+   ```php
+      public function updateFav(Request $request){
+         try {
+               // code...
+         } catch (\Throwable $th) {
+               return response()->json(array('resultado'=> 'NOK: '.$th->getMessage().' | '));
+         }
+
+      }
    ```
