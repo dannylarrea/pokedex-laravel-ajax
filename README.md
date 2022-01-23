@@ -18,6 +18,6 @@
 
 5. finalmente, Laravel puede pedir que se ejecute el comando `php artisan key:generate` para generar una nueva variable de entorno APP_KEY
 
-
+**Para ver la vista del proyecto se ha de entrar al directorio `public`. Recordad que la URL es case sensitive**
 
 ## Agregar AJAX al desarrollo
