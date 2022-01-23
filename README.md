@@ -1,4 +1,4 @@
-#### A5 (javascript). Pokedex: Laravel + AJAX
+# A5 (javascript). Pokedex: Laravel + AJAX
 
 ### Pasos para la descarga y prueba de la aplicación:
 
