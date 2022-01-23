@@ -16,6 +16,6 @@
 
 5. crear la base de datos mediante **importanción** (se puede encontrar el fichero `.sql` en el directorio `database/sql/laravel_pokedex.sql`)
 
-   > antes NO hace falta crear la base de datos vacía, esta se crea automáticamente a partir de la importación.
+   > la base de datos se crea automáticamente a partir de la importación.
 
 ## Agregar AJAX al desarrollo
