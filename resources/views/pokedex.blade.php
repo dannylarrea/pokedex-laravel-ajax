@@ -14,6 +14,8 @@
 </head>
 
 <body>
+
+    <img src="{{asset('storage/uploads/uQqk9O2Qh7qiovmpDFPfi1UHgdrkXKO0JSDNkTiO.png')}}" width="100">
     <div class="row">
         <div class="column-1">
             <h1>Pokédex de Kanto</h1>
@@ -35,34 +37,7 @@
     </div>
 
     <div class="row" id="section-3">
-
-        <!--  @foreach($pokemons as $pokemon)
-        <div class="column-5">
-
-            @if ($pokemon->imagen == null)
-                <img src="images/unown.png" style="opacity:.3" alt="error">
-                <h4>{{$pokemon->nombre}}</h4>
-                <h4>{{$pokemon->numero_pokedex}}</h4>
-                <div><img src="images/up_image.png" alt="error" style="opacity:.3"></div>
-
-            @else
-                <img src="data:image/png;base64,{{ chunk_split(base64_encode($pokemon->imagen))}}" alt="error">
-                <h4>{{$pokemon->nombre}}</h4>
-                <h4>{{$pokemon->numero_pokedex}}</h4>
-                <div>
-                    <img src="images/catched.png" alt="error">
-                    @if ($pokemon->favorito == 1)
-                        <img src="images/fav.png" alt="error">
-                    @else
-                        <img src="images/fav.png" style="opacity:.3" alt="error">
-                    @endif
-
-                </div>
-            @endif
-
-
-        </div>         
-        @endforeach -->
+        {{-- Esta sección se rellena a partir de la función AJAX read() --}}
     </div>
 
     <!-- The Modal -->
@@ -73,7 +48,7 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="msg"></h2>
             <form method="post" onsubmit="addImage(); return false;">
-                <div> <input accept="image/png" type="file" name="pokemon_image" id="pokemon_image"></div>
+                <div> <input accept="image/png" type="file" name="pokemon_image" id="pokemon_image" required></div>
                 <div style="padding:10px"><input style="display: block;margin-left: auto;margin-right: auto;" type="submit" value="registrar Pokemon"></div>
             </form>
         </div>

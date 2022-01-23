@@ -39,7 +39,7 @@ function read() {
             for (var i = 0; i < respuesta.length; i++) {
                 tabla += '<div class="column-5">'
                 if (respuesta[i].imagen != null) {
-                    tabla += '<img src="data:image/png;base64,' + respuesta[i].imagen + '" alt="error">'
+                    tabla += '<img src="' + respuesta[i].imagen + '" alt="error">'
                     tabla += '<div>'
 
                     tabla += '<img src="images/catched.png" alt="error">'
@@ -54,7 +54,7 @@ function read() {
 
                 } else {
                     tabla += '<img src="images/unown.png" style="opacity:.3" alt="error"></img>'
-                    tabla += '<div><img src="images/up_image.png" alt="error" style="opacity:.3" onclick="openModal(&#039' + respuesta[i].nombre + '&#039,' + respuesta[i].numero_pokedex + ')"></div>'
+                    tabla += '<div><img src="images/up_image.png" alt="error" style="opacity:.3" onclick="openModal(\'' + respuesta[i].nombre + '\',' + respuesta[i].numero_pokedex + ')"></div>'
 
                 }
 

@@ -27,34 +27,27 @@ class PokemonController extends Controller
         }else{
             $pokemon=DB::select('select * from pokemon');
         }
-        foreach($pokemon as $i){
-            if($i->imagen != null){
-                $i->imagen=base64_encode($i->imagen);
-            }
-        }
-        return response()->json($pokemon, 200);
+        return response()->json($pokemon);
     }
 
     public function updateFav(Request $request){
         try {
             DB::update('update pokemon set favorito = ? where numero_pokedex=?', [$request->input('favorito'), $request->input('numero_pokedex')]);
-            return response()->json(array('resultado'=> 'OK'), 200);
+            return response()->json(array('resultado'=> 'OK'));
         } catch (\Throwable $th) {
-            return response()->json(array('resultado'=> 'NOK: '.$th->getMessage().' | '), 200);
+            return response()->json(array('resultado'=> 'NOK: '.$th->getMessage().' | '));
         }
 
     }
     public function updateImage(Request $request){
         try {
-            // getRealPath - Devuelve la ruta del fichero
-            $img=$request->file('img')->getRealPath();
-            // file_get_contents — Transmite un fichero completo a una cadena
-            $img_string = file_get_contents($img);
-
-            DB::update('update pokemon set imagen = ? where numero_pokedex=?', [$img_string, $request->input('numero_pokedex')]);
-            return response()->json(array('resultado'=> 'OK'), 200);
+            //bookcover: name del input, uploads: directorio storage/app/uploads
+            $path = $request->file('img')->store('uploads');
+            DB::update('update pokemon set imagen = ? where numero_pokedex=?', [$path, $request->input('numero_pokedex')]);
+        
+            return response()->json(array('resultado'=> 'OK'));
         } catch (\Throwable $th) {
-            return response()->json(array('resultado'=> 'NOK: '.$th->getMessage().' | '), 200);
+            return response()->json(array('resultado'=> 'NOK: '.$th->getMessage().' | '));
         }
     }
 }
