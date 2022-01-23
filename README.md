@@ -67,6 +67,5 @@
          } catch (\Throwable $th) {
                return response()->json(array('resultado'=> 'NOK: '.$th->getMessage().' | '));
          }
-
       }
    ```
