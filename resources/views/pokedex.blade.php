@@ -23,6 +23,7 @@
     <div class="row" id="section-2">
         <div class="column-2 padding-3">
             <input type="text" name="searchPokemon" id="searchPokemon" placeholder="Pokémon..." onkeyup="read()">
+            <input type="hidden" name="_method" value="POST" id="postPokemon">
         </div>
 
         <div class="column-2 padding-2" id="message">

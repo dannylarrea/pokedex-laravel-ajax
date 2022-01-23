@@ -21,3 +21,25 @@
 **Para ver la vista del proyecto se ha de entrar al directorio `public`. ¡Recordad que la URL es case sensitive!**
 
 ### Agregar AJAX al desarrollo
+
+1. ```js
+   /* Actualiza el campo imagen de un pokemon en la base de datos */
+   function addImage() {
+      // code...
+   }
+   ```
+
+2. ```js
+   /* Actualiza el campo favorito de un pokemon en la base de datos */
+   function updateFav(num, fav) {
+      // code...
+      /* 
+      // Para recoger ficheros (imágenes) de un formulario y enviarlas al controlador
+      // la recojo:
+      var imagen = document.getElementById('pokemon_image').files[0];
+      // la añado al formData:
+      var formData = new FormData();
+      formData.append('img', imagen);
+      */
+   }
+   ```

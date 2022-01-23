@@ -26,8 +26,11 @@ function read() {
     divResultado = document.getElementById('section-3');
     pokemon = document.getElementById('searchPokemon').value;
     var token = document.getElementById('token').getAttribute("content");
+    var method = document.getElementById('postPokemon').value
+
     var formData = new FormData();
     formData.append('_token', token);
+    formData.append('_method', method);
 
     var ajax = objetoAjax();
     ajax.open("POST", "readRoute", true);
@@ -106,10 +109,8 @@ function updateFav(num, fav) {
 function addImage() {
     var divMensaje = document.getElementById('mensaje');
     var numero_pokedex = document.getElementById('pokemon_num').value;
-    var img = document.getElementById('pokemon_image');
     var token = document.getElementById('token').getAttribute("content");
-
-    var imagen = img.files[0];
+    var imagen = document.getElementById('pokemon_image').files[0];
     var formData = new FormData();
     formData.append('numero_pokedex', numero_pokedex);
     formData.append('img', imagen);
