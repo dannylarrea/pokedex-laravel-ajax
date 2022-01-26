@@ -22,6 +22,8 @@
 
 ### Agregar AJAX al desarrollo
 
+**Error MacOS:** se ha de generar el enlace simbólico `php artisan storage:link` en la consola de XAMPP para utilizar imágenes.
+
 1. **ajax.js**
    ```js
    /* Actualiza el campo imagen de un pokemon en la base de datos */
